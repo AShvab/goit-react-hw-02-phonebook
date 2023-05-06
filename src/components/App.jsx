@@ -6,13 +6,12 @@ import ContactList from './ContactList/ContactList';
 import SearchContact from './SearchContact';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Container, Subtitle, Title } from './App.styled';
 
 class App extends Component {
   state = {
     contacts: contacts,
     filter: '',
-    name: '',
-    number: '',
   };
 
   addContact = (contact) => {
@@ -23,7 +22,6 @@ class App extends Component {
       toast.warning(`${name} is already in contacts`);
       return;
     }
-
     const newContact = { ...contact };
     newContact.id = nanoid();
     this.setState(({ contacts }) => ({
@@ -36,15 +34,12 @@ class App extends Component {
       contacts: [...contacts].filter(({ id }) => id !== removeId),
     }));
 
-  handleInputChange = (event) => {
-    const { name, value } = event.target;
-    this.setState({ [name]: value });
-  };
 
   searchContact = (event) => {
     const { value } = event.target;
     this.setState({ filter: value });
   };
+
 
   getFilteredContacts = () => {
     const { contacts, filter } = this.state;
@@ -57,10 +52,10 @@ class App extends Component {
     const filteredContacts = this.getFilteredContacts();
 
     return (
-      <div>
-        <h1>PhoneBook</h1>
+      <Container>
+        <Title>PhoneBook</Title>
         <Form onSubmit={this.addContact} />
-        <h2>Contacts</h2>
+        <Subtitle>Contacts</Subtitle>
         <SearchContact searchContact={this.searchContact} />
         {filteredContacts.length > 0 ? (
           <ContactList
@@ -71,7 +66,7 @@ class App extends Component {
           <p>Contact list is empty</p>
         )}
         <ToastContainer autoClose={5000} />
-      </div>
+      </Container>
     );
   }
 }

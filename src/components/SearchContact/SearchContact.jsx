@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Input, LabelForm} from 'components/Form/Form.styled';
+import { Filter } from './SearchContact.styled';
+// import { LabelForm } from 'components/Form/Form.styled';
+
 
 function SearchContact({ searchContact }) {
   return (
-    <div>
-      <label htmlFor="filter">Find contacts by name:</label>
-      <input
+    <Filter>
+      <LabelForm htmlFor="filter">Find contacts by name:</LabelForm>
+      <Input
         type="text"
         id="filter"
         name="filter"
         onChange={searchContact}
       />
-    </div>
+    </Filter>
   );
 }
 

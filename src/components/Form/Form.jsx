@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
+import { Button, Input, LabelForm,  StyledForm } from './Form.styled';
 
 class Form extends Component {
   // state всередині форми потрібен, щоб коли ми щось вводимо в форму, перемальовувались інпути
@@ -29,11 +30,12 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <StyledForm onSubmit={this.handleSubmit}>
         <div>
-          <label htmlFor={this.nameInputId}>
+          <LabelForm htmlFor={this.nameInputId}>
             Name
-            <input
+            </LabelForm>
+            <Input
               value={this.state.name}
               onChange={this.handleChange}
               type="text"
@@ -43,12 +45,13 @@ class Form extends Component {
               required
               id={this.nameInputId}
             />
-          </label>
+          
         </div>
         <div>
-          <label htmlFor={this.numberInputId}>
+          <LabelForm htmlFor={this.numberInputId}>
             Number
-            <input
+            </LabelForm>
+            <Input
               value={this.state.number}
               onChange={this.handleChange}
               type="tel"
@@ -58,11 +61,11 @@ class Form extends Component {
               required
               id={this.numberInputId}
             />
-          </label>
+          
         </div>
 
-        <button type="submit">Add contact</button>
-      </form>
+        <Button type="submit">Add contact</Button>
+      </StyledForm>
     );
   }
 }
