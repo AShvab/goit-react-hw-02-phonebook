@@ -34,10 +34,18 @@ export const Button = styled.button`
   width: 160px;
   border-radius: 20px;
   border: none;
-  background: #cd8b9a;
   color: #590042;
+  background: #cd8b9a;
   box-shadow: 1px 1px 3px 4px rgba(119,  5,  47, 0.7);
   margin: 0 auto;
   padding: 10px 16px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #590042;
+    color: #cd8b9a;
+    box-shadow: 1px 1px 5px 5px rgba(119, 5, 47, 0.9);
+    transform: translateY(-2px);
+  } 
 `

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Input, LabelForm} from 'components/Form/Form.styled';
 import { Filter } from './SearchContact.styled';
-// import { LabelForm } from 'components/Form/Form.styled';
 
 
 function SearchContact({ searchContact }) {

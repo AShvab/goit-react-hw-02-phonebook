@@ -6,7 +6,7 @@ import ContactList from './ContactList/ContactList';
 import SearchContact from './SearchContact';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Container, Subtitle, Title } from './App.styled';
+import { Container, Subtitle, Text, Title } from './App.styled';
 
 class App extends Component {
   state = {
@@ -63,9 +63,9 @@ class App extends Component {
             removeContact={this.removeContact}
           />
         ) : (
-          <p>Contact list is empty</p>
+          <Text>Contact list is empty</Text>
         )}
-        <ToastContainer autoClose={3000} />
+        <ToastContainer autoClose={2000} />
       </Container>
     );
   }
