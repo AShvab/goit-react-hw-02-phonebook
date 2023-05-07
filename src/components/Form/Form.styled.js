@@ -5,8 +5,8 @@ export const StyledForm = styled.form`
   flex-direction: column;
   justify-content: space-between;
   max-width: 400px;
-  height: 240px;
-  padding: 40px;
+  height: 220px;
+  padding: 20px 40px;
   border-radius: 8px;
   background: #F9B8C7; 
   box-shadow: 1px 1px 3px 4px rgba(119,  5,  47, 0.7);

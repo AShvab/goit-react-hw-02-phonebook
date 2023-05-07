@@ -65,7 +65,7 @@ class App extends Component {
         ) : (
           <p>Contact list is empty</p>
         )}
-        <ToastContainer autoClose={5000} />
+        <ToastContainer autoClose={3000} />
       </Container>
     );
   }
