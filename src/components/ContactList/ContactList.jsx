@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactListItem from 'components/ContactListItem/ContactListItem';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 
 function ContactList({ contacts, removeContact }) {
@@ -11,7 +11,7 @@ function ContactList({ contacts, removeContact }) {
           contacts.map(contact => {
             return (
                 <ContactListItem
-                  key={nanoid()}
+                  key={contact.id}
                   name={contact.name}
                   number={contact.number}
                   id={contact.id}
