@@ -32,3 +32,5 @@ export const Button = styled.button`
     box-shadow: 0px 0px 2px 3px rgba(119, 5, 47, 0.9);
   }
 `;
+
+

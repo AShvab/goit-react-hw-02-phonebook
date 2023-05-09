@@ -1,10 +1,14 @@
 import React from 'react';
 import ContactListItem from 'components/ContactListItem/ContactListItem';
 import PropTypes from 'prop-types';
+import { Total } from './ContactList.styled';
+
 
 function ContactList({ contacts, removeContact }) {
-    return (        
-      <ul>
+    return ( 
+      <div>
+        <Total>PhoneBook contains: {contacts.length} contacts</Total>
+        <ul>        
         {Array.isArray(contacts) &&
           contacts.length &&
           contacts.map(contact => {
@@ -19,6 +23,8 @@ function ContactList({ contacts, removeContact }) {
               );
             })}
       </ul>
+      </div>    
+
     );
   }
   
