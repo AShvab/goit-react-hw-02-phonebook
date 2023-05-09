@@ -1,6 +1,5 @@
 import React from 'react';
 import ContactListItem from 'components/ContactListItem/ContactListItem';
-// import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 
 function ContactList({ contacts, removeContact }) {
