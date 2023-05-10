@@ -56,7 +56,7 @@ class App extends Component {
         <Title>PhoneBook</Title>
         <Form onSubmit={this.addContact} />
         <Subtitle>Contacts</Subtitle>
-        <Total>Total contacts: {contacts.length}</Total>
+        <Total>Total contacts: {filteredContacts.length}</Total>
         <SearchContact searchContact={this.searchContact} />
         {filteredContacts.length > 0 ? (
           <ContactList
