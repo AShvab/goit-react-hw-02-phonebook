@@ -6,7 +6,7 @@ import ContactList from './ContactList/ContactList';
 import SearchContact from './SearchContact';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Container, Subtitle, Text, Title } from './App.styled';
+import { Container, Subtitle, Text, Title, Total } from './App.styled';
 
 class App extends Component {
   state = {
@@ -56,6 +56,7 @@ class App extends Component {
         <Title>PhoneBook</Title>
         <Form onSubmit={this.addContact} />
         <Subtitle>Contacts</Subtitle>
+        <Total>Total contacts: {contacts.length}</Total>
         <SearchContact searchContact={this.searchContact} />
         {filteredContacts.length > 0 ? (
           <ContactList
